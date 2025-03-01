@@ -10,20 +10,39 @@ import "./styles.slides.scss";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
+function testarImagem(url) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.src = url;
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+  });
+}
+
 export function Slides() {
   const [recipesSlides, setRecipesSlide] = useState([]);
 
   useEffect(() => {
     const getRecipes = async () => {
       const data = await getRandomRecipes(6);
-      setRecipesSlide(data);
+
+      // Testa cada imagem antes de definir no estado
+      const validRecipes = await Promise.all(
+        data.map(async recipe => {
+          const isValid = await testarImagem(recipe.imageUrl);
+          return isValid ? recipe : null;
+        })
+      );
+
+      setRecipesSlide(validRecipes.filter(Boolean)); // Remove imagens inválidas
     };
 
     getRecipes();
   }, []);
+
   return (
     <section className="slidesPart">
-      <h1>Conheça novas receitas </h1>
+      <h1>Conheça novas receitas</h1>
       <div className="slideContainer">
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
@@ -35,13 +54,11 @@ export function Slides() {
             delay: 4500,
           }}
           spaceBetween={30}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => console.log(swiper)}
           rewind
         >
           {recipesSlides.map((recipe, index) => (
             <SwiperSlide key={`Slide${index}`}>
-              <a href={` /recipe/${recipe.id}`}>
+              <a href={`/recipe/${recipe.id}`}>
                 <img
                   sizes="(100%, 100%)"
                   src={recipe.imageUrl}
