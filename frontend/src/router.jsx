@@ -1,8 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, redirect } from "react-router-dom";
 import { MainLayout } from "./components/Layout";
-import { Home, ErrorPage, Recipe, SurpriseRecipe, UnderConstructionPage, About } from "./pages";
+import { Home, ErrorPage, Recipe, UnderConstructionPage, About } from "./pages";
+import { getRandomRecipes } from "./utils/recipeUtils";
 
-const construction = ["login", "register", "profile", "category"];
+const construction = ["profile", "category"];
 
 export const routes = createBrowserRouter([
   {
@@ -19,10 +20,6 @@ export const routes = createBrowserRouter([
         element: <Recipe />,
       },
       {
-        path: "/recipe/0",
-        element: <SurpriseRecipe />,
-      },
-      {
         path: "/about",
         element: <About />,
       },
@@ -32,4 +29,17 @@ export const routes = createBrowserRouter([
     path: `/${page}`,
     element: <UnderConstructionPage />,
   })),
+
+  {
+    path: "/surprise-recipe",
+    loader: async () => {
+      return redirect("/recipe/" + (await getRandomRecipes(1))[0].id);
+    },
+  },
+  {
+    path: "/recipe/0",
+    loader: async () => {
+      return redirect("/recipe/" + (await getRandomRecipes(1))[0].id);
+    },
+  },
 ]);
