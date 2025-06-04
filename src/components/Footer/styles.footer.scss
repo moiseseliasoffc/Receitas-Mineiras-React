@@ -1,0 +1,44 @@
+@use "@/styles/themes/variables" as *;
+
+footer {
+  padding: 2%;
+  background-color: $azul-base;
+  box-shadow: 0px 0px 40px 5px $azul-escuro;
+
+  a {
+    text-decoration: none;
+    color: $azul-royal;
+  }
+
+  & > div {
+    display: flex;
+    border-bottom: $azul-escuro 2px solid;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: white;
+  }
+  & > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: $azul-palido;
+      }
+    }
+  }
+}
