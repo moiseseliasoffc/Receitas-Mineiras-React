@@ -1,5 +1,6 @@
 import { CircleArrowRightIcon, User2Icon, UserPlus } from "lucide-react";
 import "./styles.userMenu.scss";
+import { Link } from "react-router-dom";
 
 export function UserMenu() {
   const isUserLoggedIn = localStorage.getItem("loggedIn");
@@ -7,9 +8,9 @@ export function UserMenu() {
   function UserLoggedMenu() {
     return (
       <div className="userMenu">
-        <a className="buttonRoyal" href="/account">
+        <Link className="buttonRoyal" to="/account">
           Minha Conta <User2Icon />
-        </a>
+        </Link>
       </div>
     );
   }
@@ -17,14 +18,14 @@ export function UserMenu() {
   function UserNotLoggedMenu() {
     return (
       <div className="userMenu">
-        <a className="buttonRoyal" href="/login">
+        <Link className="buttonRoyal" to="/login">
           Entrar
           <CircleArrowRightIcon />
-        </a>
-        <a className="buttonRoyal" href="/register">
+        </Link>
+        <Link className="buttonRoyal" to="/register">
           Criar conta
           <UserPlus />
-        </a>
+        </Link>
       </div>
     );
   }

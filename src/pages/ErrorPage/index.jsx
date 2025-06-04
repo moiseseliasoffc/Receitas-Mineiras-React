@@ -1,5 +1,6 @@
 import { BugOffIcon } from "lucide-react";
 import "./errorPage.scss";
+import { Link } from "react-router-dom";
 
 export function ErrorPage() {
   return (
@@ -7,7 +8,7 @@ export function ErrorPage() {
       <BugOffIcon />
       <h1>Página não encontrada!</h1>
       <p>
-        <a href="/">clique aqui </a> para voltar a pagina principal
+        <Link to="/">clique aqui </Link> para voltar a pagina principal
       </p>
     </main>
   );

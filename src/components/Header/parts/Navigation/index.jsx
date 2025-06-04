@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import "./styles.navigation.scss";
+import { Link } from "react-router-dom";
 
 export function Navigation() {
   const [categoryMenuState, setCategoryMenuState] = useState(false);
@@ -33,21 +34,21 @@ export function Navigation() {
           !categoryMenuState ? "categoryMenuClosed" : "categoryMenuOpened"
         }`}
       >
-        <a className=" categoryButton button" href="/category/refeicao">
+        <Link className="button categoryButton" to="/category/refeicao">
           Refeição
-        </a>
-        <a className="button categoryButton" href="/category/cafe-da-manha">
+        </Link>
+        <Link className="button categoryButton" to="/category/cafe-da-manha">
           Café da manhã
-        </a>
-        <a className="button categoryButton" href="/category/sobremesa">
+        </Link>
+        <Link className="button categoryButton" to="/category/sobremesa">
           Sobremesa
-        </a>
-        <a className="button categoryButton" href="/category/aperitivo">
+        </Link>
+        <Link className="button categoryButton" to="/category/aperitivo">
           Aperitivo
-        </a>
-        <a className="button categoryButton" href="/category/bebida">
+        </Link>
+        <Link className="button categoryButton" to="/category/bebida">
           Bebida
-        </a>
+        </Link>
       </div>
     );
   }
@@ -56,9 +57,9 @@ export function Navigation() {
     <nav className="navigation">
       <ul>
         <li>
-          <a href="/" className="button">
+          <Link to="/" className="button">
             INICIO
-          </a>
+          </Link>
         </li>
         <li className="liCategory" ref={categoryMenuDropdownRef}>
           <a className={`button ${categoryMenuState ? "active" : ""}`} onClick={categoryMenuClick}>
@@ -72,14 +73,14 @@ export function Navigation() {
           <CategoryMenDropdown />
         </li>
         <li>
-          <a href="/about" className="button">
+          <Link to="/about" className="button">
             SOBRE
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/recipe/0" className="button">
+          <Link to="/recipe/0" className="button">
             SURPREENDA-ME
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

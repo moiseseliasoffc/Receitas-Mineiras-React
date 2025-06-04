@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./styles.popularRecipes.scss";
 import { getRandomRecipes } from "@utils/recipeUtils";
+import { Link } from "react-router-dom";
 
 export function PopularRecipes() {
   const [popularRecipes, setPopularRecipes] = useState([]);
@@ -20,7 +21,7 @@ export function PopularRecipes() {
       <ul>
         {popularRecipes.map(recipe => (
           <li key={recipe.id}>
-            <a href={`/recipe/${recipe.id}`}>{recipe.nome}</a>
+            <Link to={`/recipe/${recipe.id}`}>{recipe.nome}</Link>
           </li>
         ))}
       </ul>
