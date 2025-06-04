@@ -1,0 +1,141 @@
+@use "@/styles/themes/variables" as *;
+
+.authPage {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, $azul-base 40%, $azul-royal);
+  .backButton {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: $azul-royal;
+    margin-bottom: 2%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .part {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoPart {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      display: inline;
+      border-bottom: 5px solid $azul-palido;
+      width: 20vw;
+      margin-bottom: 20px;
+    }
+    p {
+      text-indent: 10%;
+      text-align: justify;
+      width: 70%;
+      color: white;
+      font-size: 1.5em;
+    }
+  }
+
+  .form {
+    background-color: #f3f3f3;
+    border: $azul-escuro solid 5px;
+    border-radius: 10px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px 5px $azul-escuro;
+
+    form {
+      border-radius: 10px;
+      padding: 2%;
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid $azul-escuro;
+      }
+      button {
+        font-size: 120%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1%;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: $azul-royal;
+        margin-bottom: 2%;
+      }
+      p {
+        color: black;
+      }
+      a,
+      p {
+        text-align: center;
+      }
+      a {
+        display: block;
+        color: $azul-royal;
+        text-decoration: none;
+        text-decoration: underline;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .authPage {
+    flex-direction: column;
+    gap: 20%;
+    .backButton {
+      width: 80%;
+      position: static;
+    }
+    .part {
+      width: 100vw;
+      height: auto;
+    }
+    .logoPart {
+      margin-top: 5%;
+      img {
+        width: 50vw;
+      }
+      p {
+        display: none;
+      }
+    }
+    .form {
+      width: 90%;
+    }
+  }
+}

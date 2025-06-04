@@ -1,6 +1,6 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
 import { MainLayout } from "./components/Layout";
-import { Home, ErrorPage, Recipe, UnderConstructionPage, About } from "./pages";
+import { Home, ErrorPage, Recipe, UnderConstructionPage, About, Register, Login } from "./pages";
 import { getRandomRecipes } from "./utils/recipeUtils";
 
 const construction = ["profile", "category"];
@@ -25,6 +25,16 @@ export const routes = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
   ...construction.map(page => ({
     path: `/${page}`,
     element: <UnderConstructionPage />,

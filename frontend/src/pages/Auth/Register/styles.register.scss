@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+  .registerPage {
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+  }
+}
