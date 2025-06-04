@@ -42,3 +42,20 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding-top: 5%;
+    & > div {
+      flex-direction: column;
+      gap: 20px;
+      border: none;
+    }
+    & > div > div {
+      width: 100%;
+      text-align: center;
+
+      border-bottom: $azul-royal 2px solid;
+    }
+  }
+}
