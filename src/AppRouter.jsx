@@ -1,12 +1,14 @@
-import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom";
-import App from "./components/Layout/MainLayout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MainLayout } from "./components/Layout";
 import { Home, ErrorPage, Recipe, SurpriseRecipe, UnderConstructionPage } from "./pages";
+
+const construction = ["login", "register", "profile", "category", "about"];
 
 function AppRouter() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <MainLayout />,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -21,32 +23,12 @@ function AppRouter() {
           path: "/recipe/0",
           element: <SurpriseRecipe />,
         },
-        {
-          path: "/login",
-          loader: () => redirect("/under-construction"),
-        },
-        {
-          path: "/register",
-          loader: () => redirect("/under-construction"),
-        },
-        {
-          path: "/profile",
-          loader: () => redirect("/under-construction"),
-        },
-        {
-          path: "/category/:category",
-          loader: () => redirect("/under-construction"),
-        },
-        {
-          path: "about",
-          loader: () => redirect("/under-construction"),
-        },
       ],
     },
-    {
-      path: "/under-construction",
+    ...construction.map(page => ({
+      path: `/${page}`,
       element: <UnderConstructionPage />,
-    },
+    })),
   ]);
 
   return <RouterProvider router={router} />;

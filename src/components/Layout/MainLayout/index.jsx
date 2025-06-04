@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "@components";
+import "./styles.mainLayout.scss";
 
-function App() {
+export function MainLayout() {
   return (
     <>
       <Header />
@@ -9,5 +10,3 @@ function App() {
     </>
   );
 }
-
-export default App;
