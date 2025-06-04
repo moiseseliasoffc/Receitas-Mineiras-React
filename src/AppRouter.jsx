@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./components/Layout";
-import { Home, ErrorPage, Recipe, SurpriseRecipe, UnderConstructionPage } from "./pages";
+import { Home, ErrorPage, Recipe, SurpriseRecipe, UnderConstructionPage, About } from "./pages";
 
-const construction = ["login", "register", "profile", "category", "about"];
+const construction = ["login", "register", "profile", "category"];
 
 function AppRouter() {
   const router = createBrowserRouter([
@@ -22,6 +22,10 @@ function AppRouter() {
         {
           path: "/recipe/0",
           element: <SurpriseRecipe />,
+        },
+        {
+          path: "/about",
+          element: <About />,
         },
       ],
     },
