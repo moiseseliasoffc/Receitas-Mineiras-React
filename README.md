@@ -17,16 +17,20 @@
 <p>Para rodar o projeto localmente, siga os passos abaixo:</p>
 <ol>
   <li>Clone o repositório:</li>
-  <pre><code>git clone https://github.com/moises-elias/Receitas-Mineiras-React.js.git</code></pre>
+  <pre><code>git clone https://github.com/moiseseliasoffc/Receitas-Mineiras-React.js.git</code></pre>
 
   <li>Navegue até a pasta do projeto:</li>
   <pre><code>cd nome-do-repositorio</code></pre>
-
-  <li>Instale as dependências:</li>
-  <pre><code>npm install</code></pre>
-
-  <li>Inicie o servidor de desenvolvimento:</li>
-  <pre><code>npm start</code></pre>
+  <li>Iniciar frontend:</li>
+  <ul>
+    <br/>
+    <li>Instale as dependências:</li>
+    <pre><code>cd frontend</code></pre>
+    <pre><code>npm install</code></pre>
+    <br/>
+    <li>Inicie o servidor de desenvolvimento do frontend:</li>
+    <pre><code>npm run dev</code></pre>
+  </ul>
 </ol>
 
 <h2>Como Contribuir</h2>
@@ -39,9 +43,9 @@
 <p>Para mais informações, entre em contato pelo seu e-mail ou redes sociais:</p>
 <ul>
   <li>E-mail: <a href="mailto:moisesfelipedapaz@gmail.com">moisesfelipedapaz@gmail.com</a></li>
-  <li>LinkedIn: <a href="https://www.linkedin.com/in/moises-elias/" target="_blank">@moises-elias</a></li>
-  <li>GitHub: <a href="https://github.com/moises-elias" target="_blank">@moises-elias</a></li>
-  <li>Twitter: <a href="https://twitter.com/moises__elias__" target="_blank">@moises__elias__</a></li>
+  <li>LinkedIn: <a href="https://www.linkedin.com/in/moiseseliasoffc/" target="_blank">@moiseseliasoffc</a></li>
+  <li>GitHub: <a href="https://github.com/moiseseliasoffc" target="_blank">@moiseseliasoffc</a></li>
+  <li>Twitter: <a href="https://twitter.com/moiseseliasoffc" target="_blank">@moiseseliasoffc</a></li>
 </ul>
 
 <p>Sinta-se à vontade para entrar em contato!</p>
