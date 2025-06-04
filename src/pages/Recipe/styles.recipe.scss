@@ -1,4 +1,4 @@
-@use "@/styles/themes/variables.scss";
+@use "@/styles/themes/variables" as *;
 .recipePage {
   justify-content: center;
   padding-bottom: 2em;
@@ -15,25 +15,25 @@
       align-items: center;
       padding: 1%;
       color: white;
-      background-color: variables.$azul-royal;
+      background-color: $azul-royal;
       border-radius: 50%;
       border: none;
       transition: box-shadow 0.1s ease-in-out;
 
       &:hover {
         cursor: pointer;
-        box-shadow: 0 0 0 3px variables.$azul-royal;
+        box-shadow: 0 0 0 3px $azul-royal;
       }
     }
   }
   ul {
     padding: 0.5%;
-    border-left: 1px solid variables.$azul-escuro;
+    border-left: 1px solid $azul-escuro;
   }
   section {
     margin: 0% 20% 2% 20%;
     margin-bottom: 4%;
-    border-bottom: variables.$azul-escuro 1px solid;
+    border-bottom: $azul-escuro 1px solid;
     padding: 2% 0 2% 0;
   }
 
@@ -54,8 +54,8 @@
   a {
     color: black;
     &:hover {
-      text-decoration: underline variables.$azul-escuro 1px solid;
-      color: variables.$azul-escuro;
+      text-decoration: underline $azul-escuro 1px solid;
+      color: $azul-escuro;
     }
   }
   .video {
@@ -66,7 +66,7 @@
       aspect-ratio: 16/9;
       width: 100%;
       height: 100%;
-      border: variables.$azul-base solid 2x;
+      border: $azul-base solid 2x;
       box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
     }
   }

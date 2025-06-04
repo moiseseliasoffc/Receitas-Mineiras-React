@@ -1,7 +1,7 @@
-@use "@/styles/themes/variables.scss";
+@use "@/styles/themes/variables" as *;
 header {
   width: 100%;
-  background-color: variables.$azul-base;
+  background-color: $azul-base;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   @media screen and (max-width: 768px) {

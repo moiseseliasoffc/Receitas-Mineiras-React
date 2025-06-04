@@ -1,3 +1,3 @@
 @use "base/_reset.scss";
 @use "base/_typography.scss";
-@use "@/styles/themes/variables.scss";
+@use "@/styles/themes/variables" as *;

@@ -1,4 +1,4 @@
-@use "@/styles/themes/variables.scss";
+@use "@/styles/themes/variables" as *;
 
 .homePage {
   .slidesPart {
@@ -11,11 +11,11 @@
 
       .swiper {
         width: 70%;
-        box-shadow: 0px 0px 40px 5px variables.$azul-base;
+        box-shadow: 0px 0px 40px 5px $azul-base;
         height: 60vh;
         overflow: hidden;
         border-radius: 15px;
-        background-color: variables.$azul-cobalto;
+        background-color: $azul-cobalto;
 
         a {
           width: 100%;
@@ -25,14 +25,14 @@
           margin-bottom: -0.5%;
         }
         .swiper-pagination-bullet {
-          background-color: variables.$azul-palido;
+          background-color: $azul-palido;
           width: 8px;
           height: 8px;
           opacity: 0.6;
           transition: opacity 0.3s ease;
 
           &-active {
-            background-color: variables.$azul-base;
+            background-color: $azul-base;
             opacity: 1;
           }
         }
@@ -41,17 +41,17 @@
         .swiper-button-next,
         .swiper-button-prev {
           padding: 3%;
-          color: variables.$azul-cobalto;
+          color: $azul-cobalto;
 
           transition: color 0.3s ease;
           &:hover {
-            color: variables.$azul-palido;
+            color: $azul-palido;
           }
         }
       }
       /* Estilo para os slides */
       .swiper-slide {
-        background-color: variables.$azul-cobalto;
+        background-color: $azul-cobalto;
         display: flex;
         flex-direction: column;
         justify-content: center;

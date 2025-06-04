@@ -1,4 +1,4 @@
-@use "@/styles/themes/variables.scss";
+@use "@/styles/themes/variables" as *;
 header {
   .search {
     display: flex;
@@ -20,17 +20,17 @@ header {
       background-color: transparent;
       padding: 5px;
       border-radius: 5px;
-      border: 1px solid variables.$azul-cobalto;
+      border: 1px solid $azul-cobalto;
       color: white;
       transition: scale ease 0.2s;
 
       &:hover {
-        box-shadow: 0px 0px 40px variables.$azul-cobalto;
+        box-shadow: 0px 0px 40px $azul-cobalto;
       }
       &:focus {
-        outline: variables.$azul-cobalto solid 1px;
+        outline: $azul-cobalto solid 1px;
         background-color: b;
-        box-shadow: 5px 5px 40px variables.$azul-cobalto;
+        box-shadow: 5px 5px 40px $azul-cobalto;
         scale: 1.01;
         &::placeholder {
           color: white;
@@ -40,15 +40,15 @@ header {
 
     button {
       background-color: transparent;
-      color: variables.$azul-cobalto;
+      color: $azul-cobalto;
       border-radius: 5px;
-      border: 1px solid variables.$azul-cobalto;
+      border: 1px solid $azul-cobalto;
       padding: 3px 4px;
 
       &:hover {
         cursor: pointer;
-        box-shadow: 5px 5px 40px variables.$azul-cobalto;
-        background-color: variables.$azul-cobalto;
+        box-shadow: 5px 5px 40px $azul-cobalto;
+        background-color: $azul-cobalto;
         color: white;
       }
     }
