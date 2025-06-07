@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import "./styles.navigation.scss";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export function Navigation() {
   const [categoryMenuState, setCategoryMenuState] = useState(false);

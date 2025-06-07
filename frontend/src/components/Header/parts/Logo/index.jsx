@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import "./styles.logo.scss";
 import logo from "@assets/default_transparent_765x625.png";
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./styles.popularRecipes.scss";
 import { getRandomRecipes } from "@utils/recipeUtils";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export function PopularRecipes() {
   const [popularRecipes, setPopularRecipes] = useState([]);

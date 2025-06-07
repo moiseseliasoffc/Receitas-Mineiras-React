@@ -1,6 +1,6 @@
 import { BugOffIcon } from "lucide-react";
 import "./errorPage.scss";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export function ErrorPage() {
   return (

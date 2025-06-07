@@ -1,7 +1,7 @@
 import { Star, ShareIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 import { searchRecipe } from "../../utils/recipeUtils";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import "./styles.recipe.scss";
 
 export function Recipe() {

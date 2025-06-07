@@ -1,0 +1,50 @@
+@use "@/styles/themes/variables" as *;
+
+.verifyEmailPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1em;
+  }
+  button {
+    width: 25%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: $azul-royal;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 0;
+    h1 {
+      font-size: 1.5em;
+    }
+    p {
+      text-align: center;
+      font-size: 1em;
+    }
+    button {
+      width: 50%;
+    }
+  }
+}
